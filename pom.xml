@@ -23,14 +23,14 @@
 		<developerConnection>scm:git:git@github.com:vindell/${project.artifactId}.git</developerConnection>
 		<url>git@github.com:vindell/${project.artifactId}.git</url>
 	</scm>
-
-	<developers>
-		<developer>
-			<id>vindell</id>
-			<name>万大龙</name>
-			<email>hnxyhcwdl1003@163.com</email>
-		</developer>
-	</developers>
+	
+	 <developers>
+        <developer>
+        	<id>001</id>
+            <name>vindell</name>
+            <email>hnxyhcwdl1003@163.com</email>
+        </developer>
+    </developers> 
 	
 	<build>
 		<pluginManagement>
@@ -80,6 +80,19 @@
 									</resource>
 								</resources>
 							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>findbugs-maven-plugin</artifactId>
+					<version>3.0.4</version>
+					<executions>
+						<execution>
+							<phase>verify</phase>
+							<goals>
+								<goal>check</goal>
+							</goals>
 						</execution>
 					</executions>
 				</plugin>
@@ -134,37 +147,7 @@
 							</manifestEntries> -->
 	                    </archive>  
 	                </configuration>  
-	                <executions>
-						<!-- 增加关于接口打包的配置：配置后会在原有打包的基础上多打包一个api包
-						<execution>
-							<id>package-api</id>
-							<goals>
-								<goal>jar</goal>
-							</goals>
-							<phase>package</phase>
-							<configuration>
-								<classifier>api</classifier>
-								<includes>
-									<include>**/interface/**</include>
-								</includes>
-							</configuration>
-						</execution> -->
-						<!-- <execution>
-							<id>package-all</id>
-							<goals>
-								<goal>jar</goal>
-							</goals>
-							<phase>package</phase>
-							<configuration>
-								<classifier>all</classifier>
-								<includes>
-									<include>**</include>
-								</includes>
-							</configuration>
-						</execution> -->
-					</executions>
 				</plugin> 
-				 
 				<!-- 安装插件：将项目输出构件安装到本地仓库 --> 
 				<plugin>  					 
 					<groupId>org.apache.maven.plugins</groupId>  
