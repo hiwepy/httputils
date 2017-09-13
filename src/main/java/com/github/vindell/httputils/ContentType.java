@@ -1,16 +1,5 @@
 package com.github.vindell.httputils;
 
-
-/**
- *@类名称	: HttpContentType.java
- *@类描述	：
- *@创建人	：wandalong
- *@创建时间	：2016年4月27日 下午12:07:04
- *@修改人	：
- *@修改时间	：
- *@版本号	:v1.0
- */
-
 public abstract class ContentType {
 	
 	// constants

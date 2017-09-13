@@ -172,12 +172,12 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 
 	/**
 	 * 
-	 * @description ： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为
-	 *              application/json
-	 * @author ： wandalong
-	 * @date ：2015-6-24 上午09:13:35
+	 * @description	： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:40:59
 	 * @param baseURL
-	 * @param paramsMap
+	 * @param json
+	 * @param handler
 	 * @return
 	 * @throws IOException
 	 */
@@ -187,11 +187,13 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 
 	/**
 	 * 
-	 * @description ： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
-	 * @author ： wandalong
-	 * @date ：2015-6-24 上午09:13:35
+	 * @description	： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:41:09
 	 * @param baseURL
-	 * @param paramsMap
+	 * @param json
+	 * @param charset
+	 * @param handler
 	 * @return
 	 * @throws IOException
 	 */
@@ -201,12 +203,14 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 
 	/**
 	 * 
-	 * @description ： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为
-	 *              application/json
-	 * @author ： wandalong
-	 * @date ：2015-6-24 上午09:13:35
+	 * @description	：  使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:41:21
 	 * @param baseURL
-	 * @param paramsMap
+	 * @param json
+	 * @param charset
+	 * @param headers
+	 * @param handler
 	 * @return
 	 * @throws IOException
 	 */
@@ -246,7 +250,8 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 
 	/**
 	 * 
-	 * @description: 无条件的释放链接
+	 * @description	： 
+	 * 无条件的释放链接
 	 * <p>
 	 * Example Code:
 	 * <pre>
@@ -258,11 +263,9 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 	 * } finally {
 	 * 	 HttpClientUtils.releaseQuietly(httpRequest);
 	 * }
-	 * @author : wandalong
-	 * @date 上午12:15:37 2015-9-4 
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:41:35
 	 * @param httpRequest：要释放链接的  HttpMethodBase子对象, 可能为空或者已经关闭.
-	 * @return  void
-	 * @throws
 	 */
 	public static void releaseQuietly(HttpMethodBase httpRequest) {
 		// 关闭连接,释放资源

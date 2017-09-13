@@ -6,13 +6,12 @@ import java.io.InputStream;
 import org.apache.commons.httpclient.methods.multipart.PartSource;
 
 /**
- *@类名称	: InputStreamPartSource.java
- *@类描述	：
- *@创建人	：wandalong
- *@创建时间	：2016年4月26日 下午4:32:45
- *@修改人	：
- *@修改时间	：
- *@版本号	:v1.0
+ * 
+ * @className	： InputStreamPartSource
+ * @description	： TODO(描述这个类的作用)
+ * @author 		： <a href="https://github.com/vindell">vindell</a>
+ * @date		： 2017年9月12日 下午10:40:26
+ * @version 	V1.0
  */
 public class InputStreamPartSource implements PartSource {
 

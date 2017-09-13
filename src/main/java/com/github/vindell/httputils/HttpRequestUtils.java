@@ -34,7 +34,6 @@ import com.github.vindell.httputils.exception.HttpResponseException;
 import com.github.vindell.httputils.multipart.InputStreamPartSource;
 
 /**
- * 
  * @className	： HttpRequestUtils
  * @description	： HttpClient请求准备处理工具；如 构建URL,处理参数
  * @author 		： <a href="https://github.com/vindell">vindell</a>
@@ -46,14 +45,7 @@ public abstract class HttpRequestUtils {
 	protected static Logger LOG = LoggerFactory.getLogger(HttpRequestUtils.class);
 
 	/**
-	 * 
-	 * @description ： 构建对象参数集合，如上传文件
-	 * @author ：wandalong
-	 * @date ：Jun 30, 2015 6:56:42 PM
-	 * @param baseURL
-	 * @param paramsMap
-	 * @return
-	 * @throws IOException 
+	 * 构建对象参数集合，如上传文件
 	 */
 	public static Map<String, RequestEntity> buildRequestEntity(Map<String, Object> paramsMap) throws IOException {
 		Map<String, RequestEntity> contentBodies = new HashMap<String, RequestEntity>();

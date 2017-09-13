@@ -41,13 +41,13 @@ public abstract class HttpURIUtils {
 	
 	/**
 	 * 
-	 * @description	：构建普通参数集合
-	 * @author 		： wandalong
-	 * @date 		：Jun 30, 2015 6:57:06 PM
+	 * @description	： 构建普通参数集合
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:42:40
 	 * @param baseURL
 	 * @param paramsMap
 	 * @return
-	 * @throws URIException 
+	 * @throws URIException
 	 */
 	public static List<NameValuePair> buildNameValuePairs(String baseURL, Map<String, Object> paramsMap) throws URIException {
     	//初始参数集合对象

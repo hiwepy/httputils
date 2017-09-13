@@ -3,13 +3,12 @@ package com.github.vindell.httputils.exception;
 import java.io.IOException;
 
 /**
- * @类名称 : HttpResponseException.java
- * @类描述 ：
- * @创建人 ：wandalong
- * @创建时间 ：2016年4月27日 上午11:56:28
- * @修改人 ：
- * @修改时间 ：
- * @版本号 :v1.0
+ * 
+ * @className	： HttpResponseException
+ * @description	： TODO(描述这个类的作用)
+ * @author 		： <a href="https://github.com/vindell">vindell</a>
+ * @date		： 2017年9月12日 下午10:40:20
+ * @version 	V1.0
  */
 @SuppressWarnings("serial")
 public class HttpResponseException extends IOException {
