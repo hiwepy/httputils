@@ -345,14 +345,18 @@
 				<version>${xstream.version}</version>
 			</dependency>
 			
-			<!-- ###################### Metrics 3.x ###################### -->
-			
 			<!-- Metrics is a Java library which gives you unparalleled insight into 
 				what your code does in production. Metrics provides a powerful toolkit of 
 				ways to measure the behavior of critical components in your production environment. -->
 			<dependency>
 				<groupId>io.dropwizard.metrics</groupId>
 				<artifactId>metrics-core</artifactId>
+				<version>${metrics.version}</version>
+			</dependency>
+			<!-- An Apache HttpClient wrapper providing Metrics instrumentation of connection pools, request durations and rates, and other useful information. -->
+			<dependency>
+				<groupId>io.dropwizard.metrics</groupId>
+				<artifactId>metrics-httpclient</artifactId>
 				<version>${metrics.version}</version>
 			</dependency>
 			
