@@ -14,8 +14,7 @@ import com.github.vindell.httputils.exception.HttpResponseException;
 
 /**
  * 
- * @className	： RedirectResponseHandler
- * @description	： 在JSP/Servlet编程中response.sendRedirect方法就是使用HTTP协议中的重定向机制。
+ *  在JSP/Servlet编程中response.sendRedirect方法就是使用HTTP协议中的重定向机制。
  *      它与JSP中的<jsp:forward …>的区别在于后者是在服务器中实现页面的跳转，也就是说应用容器加载了所要跳转的页面的内容并返回给客户端；
  *      而前者是返回一个状态码，这些状态码的可能值见下表，然后客户端读取需要跳转到的页面的URL并重新加载新的页面。
  *      就是这样一个过程，所以我们编程的时候就要通过HttpMethod
