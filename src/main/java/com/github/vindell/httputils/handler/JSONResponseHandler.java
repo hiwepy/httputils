@@ -20,12 +20,16 @@ import com.github.vindell.httputils.HttpResponeUtils;
 import com.github.vindell.httputils.exception.HttpResponseException;
 
 /**
+<<<<<<< HEAD
  * 
  * @className	： JSONResponseHandler
  * @description	：http请求响应处理：返回JSONObject对象
  * @author 		： <a href="https://github.com/vindell">vindell</a>
  * @date		： 2017年6月13日 下午9:17:24
  * @version 	V1.0
+=======
+ * http请求响应处理：返回JSONObject对象
+>>>>>>> branch 'master' of https://github.com/vindell/httputils.git
  */
 @SuppressWarnings("unchecked")
 public class JSONResponseHandler implements ResponseHandler<JSONObject> {
