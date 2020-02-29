@@ -272,14 +272,14 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
  		<commons-lang3.version>3.5</commons-lang3.version>
  		<commons-httpclient.version>3.1</commons-httpclient.version>
- 		<commons-io.version>2.5</commons-io.version>
+ 		<commons-io.version>2.6</commons-io.version>
  		<commons-not-yet-ssl.version>0.3.9</commons-not-yet-ssl.version>
- 		<dom4j.version>1.6.1</dom4j.version>
- 		<fastjson.version>1.2.33</fastjson.version>
+ 		<dom4j.version>2.1.1</dom4j.version>
+		<fastjson.version>1.2.62</fastjson.version>
  		<jdom.version>2.0.2</jdom.version>
  		<junit.version>4.12</junit.version>
  		<slf4j.version>1.7.21</slf4j.version>
- 		<xstream.version>1.4.8</xstream.version>
+ 		<xstream.version>1.4.11.1</xstream.version>
  		<metrics.version>3.2.2</metrics.version>
 	</properties> 
 	
@@ -344,9 +344,9 @@
 			</dependency>
 			<!--  Dom4j是一个Java的XML API，类似于jdom，用来读写XML文件的工具包。 -->
 			<dependency>
-				<groupId>dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>${dom4j.version}</version>
+			    <groupId>org.dom4j</groupId>
+			    <artifactId>dom4j</artifactId>
+			    <version>${dom4j.version}</version>
 			</dependency>
 			<!--JDOM是一种使用 XML（标准通用标记语言下的一个子集） 的独特 Java 工具包，。它的设计包含 Java 语言的语法乃至语义。-->
 			<dependency>
@@ -416,8 +416,8 @@
 		</dependency>
 		<!-- Dom4j是一个Java的XML API，类似于jdom，用来读写XML文件的工具包。 -->
 		<dependency>
-			<groupId>dom4j</groupId>
-			<artifactId>dom4j</artifactId>
+			<groupId>org.dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<!-- XStream是 thoughtworks开发的开源框架，用于实现XML数据于Java对象、Json数据的转换 -->
