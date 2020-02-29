@@ -13,116 +13,12 @@ import org.slf4j.LoggerFactory;
 import com.github.hiwepy.httputils.exception.HttpResponseException;
 
 /**
- * 
-<<<<<<< HEAD
- * @className	： RedirectResponseHandler
- * @description	： 在JSP/Servlet编程中response.sendRedirect方法就是使用HTTP协议中的重定向机制。
-=======
  *  在JSP/Servlet编程中response.sendRedirect方法就是使用HTTP协议中的重定向机制。
->>>>>>> branch 'master' of https://github.com/hiwepy/httputils.git
  *      它与JSP中的<jsp:forward …>的区别在于后者是在服务器中实现页面的跳转，也就是说应用容器加载了所要跳转的页面的内容并返回给客户端；
  *      而前者是返回一个状态码，这些状态码的可能值见下表，然后客户端读取需要跳转到的页面的URL并重新加载新的页面。
  *      就是这样一个过程，所以我们编程的时候就要通过HttpMethod
  *      .getStatusCode()方法判断返回值是否为下表中的某个值来判断是否需要跳转。
  *      如果已经确认需要进行页面跳转了，那么可以通过读取HTTP头中的location属性来获取新的地址。
- *      <table cellspacing="0" cellpadding="0" border="1">
- *      <tbody>
- *      <tr>
- *      <td style="width: 67px">
- *      <p>
- *      状态码
- *      </p>
- *      </td>
- *      <td style="width: 216px">
- *      <p>
- *      对应&nbsp;HttpServletResponse&nbsp;的常量
- *      </p>
- *      </td>
- *      <td style="width: 261px">
- *      <p>
- *      详细描述
- *      </p>
- *      </td>
- *      </tr>
- *      <tr>
- *      <td style="width: 67px">
- *      <p>
- *      301
- *      </p>
- *      </td>
- *      <td style="width: 216px">
- *      <p>
- *      SC_MOVED_PERMANENTLY
- *      </p>
- *      </td>
- *      <td style="width: 261px">
- *      <p>
- *      页面已经永久移到另外一个新地址
- *      </p>
- *      </td>
- *      </tr>
- *      <tr>
- *      <td style="width: 67px">
- *      <p>
- *      302
- *      </p>
- *      </td>
- *      <td style="width: 216px">
- *      <p>
- *      SC_MOVED_TEMPORARILY
- *      </p>
- *      </td>
- *      <td style="width: 261px">
- *      <p>
- *      页面暂时移动到另外一个新的地址
- *      </p>
- *      </td>
- *      </tr>
- *      <tr>
- *      <td style="width: 67px">
- *      <p>
- *      303
- *      </p>
- *      </td>
- *      <td style="width: 216px">
- *      <p>
- *      SC_SEE_OTHER
- *      </p>
- *      <p>
- *      &nbsp;
- *      </p>
- *      </td>
- *      <td style="width: 261px">
- *      <p>
- *      客户端请求的地址必须通过另外的&nbsp;URL&nbsp;来访问
- *      </p>
- *      </td>
- *      </tr>
- *      <tr>
- *      <td style="width: 67px">
- *      <p>
- *      307
- *      </p>
- *      </td>
- *      <td style="width: 216px">
- *      <p>
- *      SC_TEMPORARY_REDIRECT
- *      </p>
- *      </td>
- *      <td style="width: 261px">
- *      <p>
- *      同&nbsp;SC_MOVED_TEMPORARILY
- *      </p>
- *      <p>
- *      &nbsp;
- *      </p>
- *      </td>
- *      </tr>
- *    </tbody>
- * </table>
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年6月13日 下午9:15:18
- * @version 	V1.0
  */
 public class RedirectResponseHandler implements ResponseHandler<String> {
 

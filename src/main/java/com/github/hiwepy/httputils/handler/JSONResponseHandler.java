@@ -20,18 +20,9 @@ import com.github.hiwepy.httputils.HttpResponeUtils;
 import com.github.hiwepy.httputils.exception.HttpResponseException;
 
 /**
-<<<<<<< HEAD
- * 
- * @className	： JSONResponseHandler
- * @description	：http请求响应处理：返回JSONObject对象
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年6月13日 下午9:17:24
- * @version 	V1.0
-=======
  * http请求响应处理：返回JSONObject对象
->>>>>>> branch 'master' of https://github.com/hiwepy/httputils.git
+ * @author <a href="https://github.com/vindell">vindell</a>
  */
-@SuppressWarnings("unchecked")
 public class JSONResponseHandler implements ResponseHandler<JSONObject> {
 
 	// 读取输入流
