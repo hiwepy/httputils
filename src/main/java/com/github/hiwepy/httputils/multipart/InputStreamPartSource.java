@@ -6,12 +6,6 @@ import java.io.InputStream;
 import org.apache.commons.httpclient.methods.multipart.PartSource;
 
 /**
- * 
- * @className	： InputStreamPartSource
- * @description	： TODO(描述这个类的作用)
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年9月12日 下午10:40:26
- * @version 	V1.0
  */
 public class InputStreamPartSource implements PartSource {
 

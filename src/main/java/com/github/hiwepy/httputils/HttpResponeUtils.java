@@ -5,13 +5,6 @@ import org.apache.commons.httpclient.HttpMethodBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @className	： HttpResponeUtils
- * @description	： TODO(描述这个类的作用)
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年6月13日 下午9:14:12
- * @version 	V1.0
- */
 public abstract class HttpResponeUtils{
 	
 	protected static Logger LOG = LoggerFactory.getLogger(HttpResponeUtils.class);

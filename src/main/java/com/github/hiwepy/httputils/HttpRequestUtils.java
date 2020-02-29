@@ -34,17 +34,13 @@ import com.github.hiwepy.httputils.exception.HttpResponseException;
 import com.github.hiwepy.httputils.multipart.InputStreamPartSource;
 
 /**
- * @className	： HttpRequestUtils
- * @description	： HttpClient请求准备处理工具；如 构建URL,处理参数
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年6月13日 下午9:14:01
- * @version 	V1.0
+ * HttpClient请求准备处理工具；如 构建URL,处理参数
  */
 public abstract class HttpRequestUtils {
 	
 	protected static Logger LOG = LoggerFactory.getLogger(HttpRequestUtils.class);
 
-	/**
+	/*
 	 * 构建对象参数集合，如上传文件
 	 */
 	public static Map<String, RequestEntity> buildRequestEntity(Map<String, Object> paramsMap) throws IOException {

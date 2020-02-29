@@ -16,12 +16,8 @@ import org.xml.sax.SAXException;
 import com.github.hiwepy.httputils.exception.HttpResponseException;
 
 /**
- * 
- * @className	： XMLResponseHandler
- * @description	： http请求响应处理：返回org.w3c.dom.Document对象
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年6月13日 下午9:14:42
- * @version 	V1.0
+ * http请求响应处理：返回org.w3c.dom.Document对象
+ * @author <a href="https://github.com/vindell">vindell</a>
  */
 public class XMLResponseHandler implements ResponseHandler<Document> {
 

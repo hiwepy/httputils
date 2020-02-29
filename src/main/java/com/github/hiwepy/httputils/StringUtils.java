@@ -36,7 +36,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	private static final char EXTENSION_SEPARATOR = '.';
 	
-	/**
+	/*
 	 * Any number of these characters are considered delimiters between
 	 * multiple context config paths in a single String value.
 	 */
@@ -81,7 +81,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return BooleanUtils.toBoolean(getSafeStr(str , defaultStr));
 	}
 
-	/**
+	/*
 	 * 字串是否为空
 	 * 
 	 * @param str
@@ -98,7 +98,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return false;
 	}
 
-	/**
+	/*
 	 * 判断 Null 或 空字符串
 	 * 
 	 * @param str
@@ -113,7 +113,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 	// General convenience methods for working with Strings
 	//---------------------------------------------------------------------
 
-	/**
+	/*
 	 * Check whether the given String is empty.
 	 * <p>This method accepts any Object as an argument, comparing it to
 	 * {@code null} and the empty String. As a consequence, this method
@@ -128,7 +128,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (str == null || "".equals(str));
 	}
 
-	/**
+	/*
 	 * Check that the given CharSequence is neither {@code null} nor of length 0.
 	 * Note: Will return {@code true} for a CharSequence that purely consists of whitespace.
 	 * <p><pre class="code">
@@ -145,7 +145,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (str != null && str.length() > 0);
 	}
 
-	/**
+	/*
 	 * Check that the given String is neither {@code null} nor of length 0.
 	 * Note: Will return {@code true} for a String that purely consists of whitespace.
 	 * @param str the String to check (may be {@code null})
@@ -156,7 +156,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return hasLength((CharSequence) str);
 	}
 
-	/**
+	/*
 	 * Check whether the given CharSequence has actual text.
 	 * More specifically, returns {@code true} if the string not {@code null},
 	 * its length is greater than 0, and it contains at least one non-whitespace character.
@@ -185,7 +185,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return false;
 	}
 
-	/**
+	/*
 	 * Check whether the given String has actual text.
 	 * More specifically, returns {@code true} if the string not {@code null},
 	 * its length is greater than 0, and it contains at least one non-whitespace character.
@@ -198,7 +198,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return hasText((CharSequence) str);
 	}
 	
-	/**
+	/*
      * 是否包含字符串
      * @param str 验证字符串
      * @param strs 字符串组
@@ -216,7 +216,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
     }
     
 
-	/**
+	/*
 	 * Check whether the given CharSequence contains any whitespace characters.
 	 * @param str the CharSequence to check (may be {@code null})
 	 * @return {@code true} if the CharSequence is not empty and
@@ -236,7 +236,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return false;
 	}
 
-	/**
+	/*
 	 * Check whether the given String contains any whitespace characters.
 	 * @param str the String to check (may be {@code null})
 	 * @return {@code true} if the String is not empty and
@@ -247,7 +247,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return containsWhitespace((CharSequence) str);
 	}
 
-	/**
+	/*
 	 * Trim leading and trailing whitespace from the given String.
 	 * @param str the String to check
 	 * @return the trimmed String
@@ -267,7 +267,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Trim <i>all</i> whitespace from the given String:
 	 * leading, trailing, and in between characters.
 	 * @param str the String to check
@@ -289,7 +289,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Trim leading whitespace from the given String.
 	 * @param str the String to check
 	 * @return the trimmed String
@@ -306,7 +306,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Trim trailing whitespace from the given String.
 	 * @param str the String to check
 	 * @return the trimmed String
@@ -323,7 +323,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Trim all occurrences of the supplied leading character from the given String.
 	 * @param str the String to check
 	 * @param leadingCharacter the leading character to be trimmed
@@ -340,7 +340,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Trim all occurrences of the supplied trailing character from the given String.
 	 * @param str the String to check
 	 * @param trailingCharacter the trailing character to be trimmed
@@ -358,7 +358,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 	}
 
 
-	/**
+	/*
 	 * Test if the given String starts with the specified prefix,
 	 * ignoring upper/lower case.
 	 * @param str the String to check
@@ -380,7 +380,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return lcStr.equals(lcPrefix);
 	}
 
-	/**
+	/*
 	 * Test if the given String ends with the specified suffix,
 	 * ignoring upper/lower case.
 	 * @param str the String to check
@@ -403,7 +403,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return lcStr.equals(lcSuffix);
 	}
 
-	/**
+	/*
 	 * Test whether the given string matches the given substring
 	 * at the given index.
 	 * @param str the original string (or StringBuilder)
@@ -420,7 +420,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return true;
 	}
 
-	/**
+	/*
 	 * Count the occurrences of the substring in string s.
 	 * @param str string to search in. Return 0 if this is null.
 	 * @param sub string to search for. Return 0 if this is null.
@@ -439,7 +439,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return count;
 	}
 
-	/**
+	/*
 	 * Replace all occurrences of a substring within a string with
 	 * another string.
 	 * @param inString String to examine
@@ -467,7 +467,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Delete all occurrences of the given substring.
 	 * @param inString the original String
 	 * @param pattern the pattern to delete all occurrences of
@@ -477,7 +477,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return replace(inString, pattern, "");
 	}
 
-	/**
+	/*
 	 * Delete any character in a given String.
 	 * @param inString the original String
 	 * @param charsToDelete a set of characters to delete.
@@ -504,7 +504,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 	//---------------------------------------------------------------------
 
 	 
-	/**
+	/*
 	 * Unqualify a string qualified by a '.' dot character. For example,
 	 * "this.name.is.qualified", returns "qualified".
 	 * @param qualifiedName the qualified name
@@ -513,7 +513,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return unqualify(qualifiedName, '.');
 	}
 
-	/**
+	/*
 	 * Unqualify a string qualified by a separator character. For example,
 	 * "this:name:is:qualified" returns "qualified" if using a ':' separator.
 	 * @param qualifiedName the qualified name
@@ -523,7 +523,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return qualifiedName.substring(qualifiedName.lastIndexOf(separator) + 1);
 	}
 
-	/**
+	/*
 	 * Capitalize a {@code String}, changing the first letter to
 	 * upper case as per {@link Character#toUpperCase(char)}.
 	 * No other letters are changed.
@@ -534,7 +534,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return changeFirstCharacterCase(str, true);
 	}
 
-	/**
+	/*
 	 * Uncapitalize a {@code String}, changing the first letter to
 	 * lower case as per {@link Character#toLowerCase(char)}.
 	 * No other letters are changed.
@@ -560,7 +560,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Extract the filename from the given path,
 	 * e.g. "mypath/myfile.txt" -> "myfile.txt".
 	 * @param path the file path (may be {@code null})
@@ -574,7 +574,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (separatorIndex != -1 ? path.substring(separatorIndex + 1) : path);
 	}
 
-	/**
+	/*
 	 * Extract the filename extension from the given path,
 	 * e.g. "mypath/myfile.txt" -> "txt".
 	 * @param path the file path (may be {@code null})
@@ -595,7 +595,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return path.substring(extIndex + 1);
 	}
 
-	/**
+	/*
 	 * Strip the filename extension from the given path,
 	 * e.g. "mypath/myfile.txt" -> "mypath/myfile".
 	 * @param path the file path (may be {@code null})
@@ -617,7 +617,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return path.substring(0, extIndex);
 	}
 
-	/**
+	/*
 	 * Apply the given relative path to the given path,
 	 * assuming standard Java folder separation (i.e. "/" separators).
 	 * @param path the path to start from (usually a full file path)
@@ -639,7 +639,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		}
 	}
 
-	/**
+	/*
 	 * Normalize the path by suppressing sequences like "path/.." and
 	 * inner simple dots.
 	 * <p>The result is convenient for path comparison. For other uses,
@@ -706,7 +706,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return prefix + collectionToDelimitedString(pathElements, FOLDER_SEPARATOR);
 	}
 
-	/**
+	/*
 	 * Compare two paths after normalization of them.
 	 * @param path1 first path for comparison
 	 * @param path2 second path for comparison
@@ -716,7 +716,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return cleanPath(path1).equals(cleanPath(path2));
 	}
 
-	/**
+	/*
 	 * Parse the given {@code localeString} value into a {@link Locale}.
 	 * <p>This is the inverse operation of {@link Locale#toString Locale's toString}.
 	 * @param localeString the locale String, following {@code Locale's}
@@ -755,7 +755,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		}
 	}
 
-	/**
+	/*
 	 * Determine the RFC 3066 compliant language tag,
 	 * as used for the HTTP "Accept-Language" header.
 	 * @param locale the Locale to transform to a language tag
@@ -765,7 +765,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return locale.getLanguage() + (hasText(locale.getCountry()) ? "-" + locale.getCountry() : "");
 	}
 
-	/**
+	/*
 	 * Parse the given {@code timeZoneString} value into a {@link TimeZone}.
 	 * @param timeZoneString the time zone String, following {@link TimeZone#getTimeZone(String)}
 	 * but throwing {@link IllegalArgumentException} in case of an invalid time zone specification
@@ -782,7 +782,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 	}
 
 
-	/**
+	/*
 	 * Copy the given Collection into a String array.
 	 * The Collection must contain String elements only.
 	 * @param collection the Collection to copy
@@ -796,7 +796,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return collection.toArray(new String[collection.size()]);
 	}
 
-	/**
+	/*
 	 * Copy the given Enumeration into a String array.
 	 * The Enumeration must contain String elements only.
 	 * @param enumeration the Enumeration to copy
@@ -811,7 +811,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return list.toArray(new String[list.size()]);
 	}
 
-	/**
+	/*
      * 转换为字节数组
      * @param str
      * @return
@@ -828,7 +828,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
     	}
     }
     
-    /**
+    /*
      * 转换为字节数组
      * @param str
      * @return
@@ -841,7 +841,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		}
     }
     
-	/**
+	/*
 	 * 转换为Double类型
 	 */
 	public static Double toDouble(Object val){
@@ -855,28 +855,28 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		}
 	}
 
-	/**
+	/*
 	 * 转换为Float类型
 	 */
 	public static Float toFloat(Object val){
 		return toDouble(val).floatValue();
 	}
 
-	/**
+	/*
 	 * 转换为Long类型
 	 */
 	public static Long toLong(Object val){
 		return toDouble(val).longValue();
 	}
 
-	/**
+	/*
 	 * 转换为Integer类型
 	 */
 	public static Integer toInteger(Object val){
 		return toLong(val).intValue();
 	}
 	
-	/**
+	/*
 	 * 
 	 * @description	： 获得以 ",; \t\n"分割的字符数组
 	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
@@ -888,7 +888,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return tokenizeToStringArray(str, CONFIG_LOCATION_DELIMITERS, true, true);
 	}
 	
-	/**
+	/*
 	 * Tokenize the given String into a String array via a StringTokenizer.
 	 * Trims tokens and omits empty tokens.
 	 * <p>The given delimiters string is supposed to consist of any number of
@@ -907,7 +907,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return tokenizeToStringArray(str, delimiters, true, true);
 	}
 
-	/**
+	/*
 	 * Tokenize the given String into a String array via a StringTokenizer.
 	 * <p>The given delimiters string is supposed to consist of any number of
 	 * delimiter characters. Each of those characters can be used to separate
@@ -946,7 +946,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return toStringArray(tokens);
 	}
 
-	/**
+	/*
 	 * Take a String which is a delimited list and convert it to a String array.
 	 * <p>A single delimiter can consists of more than one character: It will still
 	 * be considered as single delimiter string, rather than as bunch of potential
@@ -961,7 +961,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return delimitedListToStringArray(str, delimiter, null);
 	}
 
-	/**
+	/*
 	 * Take a String which is a delimited list and convert it to a String array.
 	 * <p>A single delimiter can consists of more than one character: It will still
 	 * be considered as single delimiter string, rather than as bunch of potential
@@ -1002,7 +1002,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return toStringArray(result);
 	}
 
-	/**
+	/*
 	 * Convert a CSV list into an array of Strings.
 	 * @param str the input String
 	 * @return an array of Strings, or the empty array in case of empty input
@@ -1011,7 +1011,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return delimitedListToStringArray(str, ",");
 	}
 
-	/**
+	/*
 	 * Convenience method to convert a CSV string list to a set.
 	 * Note that this will suppress duplicates.
 	 * @param str the input String
@@ -1026,7 +1026,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return set;
 	}
 
-	/**
+	/*
 	 * Convenience method to return a Collection as a delimited (e.g. CSV)
 	 * String. E.g. useful for {@code toString()} implementations.
 	 * @param coll the Collection to display
@@ -1050,7 +1050,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * Convenience method to return a Collection as a delimited (e.g. CSV)
 	 * String. E.g. useful for {@code toString()} implementations.
 	 * @param coll the Collection to display
@@ -1061,7 +1061,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return collectionToDelimitedString(coll, delim, "", "");
 	}
 
-	/**
+	/*
 	 * Convenience method to return a Collection as a CSV String.
 	 * E.g. useful for {@code toString()} implementations.
 	 * @param coll the Collection to display
@@ -1071,7 +1071,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return collectionToDelimitedString(coll, ",");
 	}
 
-	/**
+	/*
 	 * 生成查询字串Map
 	 * 
 	 * @param str
@@ -1086,7 +1086,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return param;
 	}
 
-	/**
+	/*
 	 * 全替换
 	 * 
 	 * @param src
@@ -1118,7 +1118,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return sb.toString();
 	}
 
-	/**
+	/*
 	 * 
 	 * @param bytesSrc
 	 * @param bytesTar
@@ -1134,7 +1134,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return true;
 	}
 
-	/**
+	/*
 	 * 取中文拼音首字符
 	 * 
 	 * @param str
@@ -1173,7 +1173,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return result;
 	}
 
-	/**
+	/*
 	 * 字串分割
 	 * 
 	 * @param src
@@ -1205,7 +1205,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return retStr;
 	}
 
-	/**
+	/*
 	 * Split a String at the first occurrence of the delimiter.
 	 * Does not include the delimiter in the result.
 	 * @param toSplit the string to split
@@ -1234,7 +1234,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return toSplit.split(regex);
 	}
 
-	/**
+	/*
 	 * 去除最后一个字符
 	 * 
 	 * @param str
@@ -1248,7 +1248,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	}
 
-	/**
+	/*
 	 * 为字符串的每个元素增加单引号，供sql语句调用 如字符串"123,567"变成"'123','567'"
 	 * 
 	 * @param str
@@ -1270,7 +1270,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	}
 
-	/**
+	/*
 	 * list转string数组
 	 * 
 	 * @param list
@@ -1281,7 +1281,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return list.toArray(strs);
 	}
 
-	/**
+	/*
 	 * list转string字符串,以符号分隔
 	 * 
 	 * @param list
@@ -1292,7 +1292,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return StringUtils.join(listToArray(list), separator);
 	}
 
-	/**
+	/*
 	 * 生成随即密码
 	 * 
 	 * @author 来自网上
@@ -1322,7 +1322,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return pwd.toString();
 	}
 
-	/**
+	/*
 	 * 将传入字符串改为非NULL值.
 	 * 
 	 * @param str
@@ -1335,7 +1335,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return str;
 	}
 
-	/**
+	/*
 	 * 
 	 * @description	： 圆括号()包裹
 	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
@@ -1347,7 +1347,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (source != null ? "(" + source + ")" : null);
 	}
 
-	/**
+	/*
 	 * 
 	 * @description	： 方括号[]包裹
 	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
@@ -1363,7 +1363,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (source != null ? "\"" + source + "\"" : null);
 	}
 
-	/**
+	/*
 	 * Quote the given String with single quotes.
 	 * 
 	 * @param str
@@ -1375,7 +1375,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (str != null ? "'" + str + "'" : null);
 	}
 
-	/**
+	/*
 	 * 
 	 * @description	： 将String集合元素用'包围，并拼接
 	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
@@ -1397,7 +1397,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	}
 
-	/**
+	/*
 	 * Turn the given Object into a String with single quotes if it is a String;
 	 * keeping the Object as-is else.
 	 * 
@@ -1410,7 +1410,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return (obj instanceof String ? quote((String) obj) : obj);
 	}
 
-	/**
+	/*
 	 * 
 	 * @description	： 把一个字符的非Alpha字符都去掉,String string = "1\r\n1\r\n";-->结果："11";
 	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
@@ -1425,7 +1425,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return string.replaceAll("[^\\w]", "");
 	}
 
-	/**
+	/*
 	 * 
 	 * @description	： 把一个字符的非Alpha字符都去掉，并返回每个字符的数组,String string =
 	 *               "1\r\n1\r\n";-->结果：new String[]{"1","1"};
@@ -1454,7 +1454,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		}
 	}
 
-	/**
+	/*
 	 * 取得字符串宽 高
 	 * 
 	 * @param str
@@ -1475,7 +1475,7 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return num;
 	}
 
-	/**
+	/*
 	 * 取得字符串宽 高
 	 * 
 	 * @param str
@@ -1489,13 +1489,8 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return metrics.stringWidth(label.getText());// 字符串的宽
 	}
 
-	/**
-	 * 
-	 * @description	： 取得字符串高
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:44:04
-	 * @param str
-	 * @return
+	/*
+	 * 取得字符串高
 	 */
 	public static int getStringHeight(String str) {
 		JLabel label = new JLabel();
@@ -1505,16 +1500,11 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return metrics.getHeight();// 字符串的高,只和字体有关
 	}
 
-	/**
-	 * 
-	 * @description: 由于Java是基于Unicode编码的，因此，一个汉字的长度为1，而不是2。
+	/*
+	 * 由于Java是基于Unicode编码的，因此，一个汉字的长度为1，而不是2。
 	 *               但有时需要以字节单位获得字符串的长度。例如，“123abc长城”按字节长度计算是10，而按Unicode计算长度是8。
 	 *               为了获得10，需要从头扫描根据字符的Ascii来获得具体的长度。如果是标准的字符，Ascii的范围是0至255，
 	 *               如果是汉字或其他全角字符，Ascii会大于255。 因此，可以编写如下的方法来获得以字节为单位的字符串长度。
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:44:15
-	 * @param s
-	 * @return
 	 */
 	public static int getStringLength(String s) {
 		int length = 0;
@@ -1529,14 +1519,10 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return length;
 	}
 
-	/**
+	/*
 	 * 
-	 * @description: 基本原理是将字符串中所有的非标准字符（双字节字符）替换成两个标准字符（**，或其他的也可以）。
+	 * 基本原理是将字符串中所有的非标准字符（双字节字符）替换成两个标准字符（**，或其他的也可以）。
 	 *               这样就可以直接例用length方法获得字符串的字节长度了
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:44:25
-	 * @param s
-	 * @return
 	 */
 	public static int getStringLengthRegex(String s) {
 		s = s.replaceAll("[^\\x00-\\xff]", "**");
@@ -1544,14 +1530,8 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 		return length;
 	}
 
-	/**
-	 * 
-	 * @description	： 按特定的编码格式获取长度
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:44:36
-	 * @param str
-	 * @param code
-	 * @return
+	/*
+	 * 按特定的编码格式获取长度
 	 */
 	public static int getStringLengthCode(String str, String code) {
 		int length = 0;

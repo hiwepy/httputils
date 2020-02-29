@@ -4,12 +4,7 @@ import java.io.File;
 import java.util.Properties;
 
 /**
- * 
- * @className	： FilemimeUtils
- * @description	： 文件后缀处理工具以及对于相应头获取
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年9月12日 下午10:40:45
- * @version 	V1.0
+ * 文件后缀处理工具以及对于相应头获取
  */
 public abstract class FilemimeUtils {
 

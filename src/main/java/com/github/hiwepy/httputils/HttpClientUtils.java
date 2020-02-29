@@ -128,7 +128,7 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 		return httpRequestWithPost(baseURL, paramsMap, ContentType.UTF_8, handler);
 	}
 
-	/**
+	/*
 	 * 进行post方式的请求；Content-Type 为 application/x-www-form-urlencoded
 	 */
 	public static <T> T httpRequestWithPost(String baseURL,
@@ -170,49 +170,22 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 		}
 	}
 
-	/**
-	 * 
-	 * @description	： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:40:59
-	 * @param baseURL
-	 * @param json
-	 * @param handler
-	 * @return
-	 * @throws IOException
+	/*
+	 * 使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
 	 */
 	public static <T> T httpRequestWithPost(String baseURL, String json,ResponseHandler<T> handler) throws IOException {
 		return httpRequestWithPost(baseURL, json, ContentType.UTF_8, null, handler);
 	}
 
-	/**
-	 * 
-	 * @description	： 使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:41:09
-	 * @param baseURL
-	 * @param json
-	 * @param charset
-	 * @param handler
-	 * @return
-	 * @throws IOException
+	/*
+	 *  使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
 	 */
 	public static <T> T httpRequestWithPost(String baseURL, String json,String charset, ResponseHandler<T> handler) throws IOException {
 		return httpRequestWithPost(baseURL, json, charset, null, handler);
 	}
 
-	/**
-	 * 
-	 * @description	：  使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:41:21
-	 * @param baseURL
-	 * @param json
-	 * @param charset
-	 * @param headers
-	 * @param handler
-	 * @return
-	 * @throws IOException
+	/*
+	 *  使用apache HttpClient 组件进行post方式的请求；Content-Type 为 application/json
 	 */
 	public static <T> T httpRequestWithPost(String baseURL, String json,String charset, Map<String, String> headers,ResponseHandler<T> handler) throws IOException {
 		// 定义初始对象
@@ -250,11 +223,8 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 
 	/**
 	 * 
-	 * @description	： 
 	 * 无条件的释放链接
-	 * <p>
 	 * Example Code:
-	 * <pre>
 	 * MethodPost httpRequest = null;
 	 * try {
 	 * 	 httpRequest = new MethodPost(baseURL);
@@ -263,8 +233,6 @@ public abstract class HttpClientUtils extends HttpRequestUtils {
 	 * } finally {
 	 * 	 HttpClientUtils.releaseQuietly(httpRequest);
 	 * }
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:41:35
 	 * @param httpRequest：要释放链接的  HttpMethodBase子对象, 可能为空或者已经关闭.
 	 */
 	public static void releaseQuietly(HttpMethodBase httpRequest) {

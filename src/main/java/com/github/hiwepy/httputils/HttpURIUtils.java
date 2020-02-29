@@ -10,14 +10,8 @@ import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.URIException;
 import org.apache.commons.httpclient.util.EncodingUtil;
 import org.apache.commons.httpclient.util.URIUtil;
-/**
- * @className	： HttpURIUtils
- * @description	： TODO(描述这个类的作用)
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
- * @date		： 2017年6月13日 下午9:14:25
- * @version 	V1.0
- */
-public abstract class HttpURIUtils {
+
+public class HttpURIUtils {
 
 	public static String buildURL(String baseURL, Map<String, Object> paramsMap,String charset) throws URIException {
 		if (paramsMap == null) {
@@ -39,16 +33,6 @@ public abstract class HttpURIUtils {
 		return builder.append(builder.indexOf("?") > 0 ? "&" : "?").append(EncodingUtil.formUrlEncode(nameValuePairs, charset)).toString();
 	}
 	
-	/**
-	 * 
-	 * @description	： 构建普通参数集合
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
-	 * @date 		：2017年9月12日 下午10:42:40
-	 * @param baseURL
-	 * @param paramsMap
-	 * @return
-	 * @throws URIException
-	 */
 	public static List<NameValuePair> buildNameValuePairs(String baseURL, Map<String, Object> paramsMap) throws URIException {
     	//初始参数集合对象
     	List<NameValuePair> nameValueList    = new LinkedList<NameValuePair>();
