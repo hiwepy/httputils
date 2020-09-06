@@ -33,19 +33,11 @@ public class FileResponseHandler implements ResponseHandler<File> {
 		StatusLine statusLine = httpMethod.getStatusLine();
 		int status = statusLine.getStatusCode();
 		if (status >= HttpStatus.SC_OK && status < HttpStatus.SC_MULTIPLE_CHOICES) {
-			
-			InputStream input = null;
-			FileOutputStream output = null;
 			// 先存为临时文件，等全部下完再改回原来的文件名
 			File storeFile = new File(destFile.getParent() , destFile.getName()  + ".tmp"); 
-			try {
-				output = new FileOutputStream(storeFile);
-				input = httpMethod.getResponseBodyAsStream();
+			try (FileOutputStream output = new FileOutputStream(storeFile);
+				InputStream input = httpMethod.getResponseBodyAsStream();) {
 				IOUtils.copy(input, output);
-			} finally {
-				// 释放资源
-				IOUtils.closeQuietly(input);
-				IOUtils.closeQuietly(output);
 			}
 			storeFile.renameTo(destFile);
 			return destFile;

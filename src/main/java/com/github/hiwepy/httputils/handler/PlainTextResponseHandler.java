@@ -21,11 +21,8 @@ public class PlainTextResponseHandler implements ResponseHandler<String> {
 		StatusLine statusLine = httpMethod.getStatusLine();
 		int status = statusLine.getStatusCode();
 		if (status >= HttpStatus.SC_OK && status < HttpStatus.SC_MULTIPLE_CHOICES) {
-			try {
-				// 响应内容
-				return httpMethod.getResponseBodyAsString();
-			}  finally {
-			}
+			// 响应内容
+			return httpMethod.getResponseBodyAsString();
 		} else {
 			throw new HttpResponseException(statusLine.getStatusCode(), statusLine.getReasonPhrase());
 		}

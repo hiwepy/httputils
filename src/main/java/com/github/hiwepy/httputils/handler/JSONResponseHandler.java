@@ -8,7 +8,6 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethodBase;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.StatusLine;
-import org.apache.commons.io.IOUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -44,9 +43,8 @@ public class JSONResponseHandler implements ResponseHandler<JSONObject> {
 				// 将解析结果存储在JSONObject中
 				JSONObject resultXML = new JSONObject();
 				// 从request中取得输入流
-				InputStream input = null;
-				try {
-					input = httpMethod.getResponseBodyAsStream();
+				try (InputStream input = httpMethod.getResponseBodyAsStream();) {
+					
 					Document document = reader.read(input);
 					// 得到xml根元素
 					Element root = document.getRootElement();
@@ -64,9 +62,6 @@ public class JSONResponseHandler implements ResponseHandler<JSONObject> {
 					}
 				} catch (DocumentException ex) {
 					throw new HttpResponseException("Malformed XML document",ex);
-				} finally {
-					// 释放资源
-					IOUtils.closeQuietly(input);
 				}
 				return resultXML;
 			} else if (contentType.startsWith(ContentType.APPLICATION_JSON)) {

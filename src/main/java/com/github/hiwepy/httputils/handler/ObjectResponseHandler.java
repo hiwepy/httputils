@@ -7,7 +7,6 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethodBase;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.StatusLine;
-import org.apache.commons.io.IOUtils;
 
 import com.github.hiwepy.httputils.exception.HttpResponseException;
 import com.thoughtworks.xstream.XStream;
@@ -26,14 +25,8 @@ public class ObjectResponseHandler implements ResponseHandler<Object> {
 		StatusLine statusLine = httpMethod.getStatusLine();
 		int status = statusLine.getStatusCode();
 		if (status >= HttpStatus.SC_OK && status < HttpStatus.SC_MULTIPLE_CHOICES) {
-			InputStream input = null;
-			try {
-				// 从request中取得输入流
-				input = httpMethod.getResponseBodyAsStream();
+			try(InputStream input = httpMethod.getResponseBodyAsStream();) {
 				return xstream.fromXML(input);
-			} finally {
-				// 释放资源
-				IOUtils.closeQuietly(input);
 			}
 		} else {
 			throw new HttpResponseException(statusLine.getStatusCode(), statusLine.getReasonPhrase());
